@@ -1,0 +1,6 @@
+C:\Users\nagld\Desktop\2 курс\САОД\Stack\Stack\bin\Debug\Stack.exe.config
+C:\Users\nagld\Desktop\2 курс\САОД\Stack\Stack\bin\Debug\Stack.exe
+C:\Users\nagld\Desktop\2 курс\САОД\Stack\Stack\bin\Debug\Stack.pdb
+C:\Users\nagld\Desktop\2 курс\САОД\Stack\Stack\obj\Debug\Stack.csprojAssemblyReference.cache
+C:\Users\nagld\Desktop\2 курс\САОД\Stack\Stack\obj\Debug\Stack.exe
+C:\Users\nagld\Desktop\2 курс\САОД\Stack\Stack\obj\Debug\Stack.pdb
