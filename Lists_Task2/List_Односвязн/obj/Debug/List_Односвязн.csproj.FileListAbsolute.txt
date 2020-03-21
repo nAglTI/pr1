@@ -1,0 +1,6 @@
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\List_Односвязн\bin\Debug\List_Односвязн.exe.config
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\List_Односвязн\bin\Debug\List_Односвязн.exe
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\List_Односвязн\bin\Debug\List_Односвязн.pdb
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\List_Односвязн\obj\Debug\List_Односвязн.csprojAssemblyReference.cache
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\List_Односвязн\obj\Debug\List_Односвязн.exe
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\List_Односвязн\obj\Debug\List_Односвязн.pdb

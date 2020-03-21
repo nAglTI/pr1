@@ -1,0 +1,6 @@
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\Lists_Task2\bin\Debug\Lists_Task2.exe.config
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\Lists_Task2\bin\Debug\Lists_Task2.exe
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\Lists_Task2\bin\Debug\Lists_Task2.pdb
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\Lists_Task2\obj\Debug\Lists_Task2.csprojAssemblyReference.cache
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\Lists_Task2\obj\Debug\Lists_Task2.exe
+C:\Users\nagld\Desktop\2 курс\САОД\Lists_Task2\Lists_Task2\obj\Debug\Lists_Task2.pdb
