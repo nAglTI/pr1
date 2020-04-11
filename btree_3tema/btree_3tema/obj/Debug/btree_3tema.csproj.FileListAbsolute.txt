@@ -1,0 +1,6 @@
+C:\Users\nagld\Desktop\2 курс\САОД\btree_3tema\btree_3tema\bin\Debug\btree_3tema.exe.config
+C:\Users\nagld\Desktop\2 курс\САОД\btree_3tema\btree_3tema\bin\Debug\btree_3tema.exe
+C:\Users\nagld\Desktop\2 курс\САОД\btree_3tema\btree_3tema\bin\Debug\btree_3tema.pdb
+C:\Users\nagld\Desktop\2 курс\САОД\btree_3tema\btree_3tema\obj\Debug\btree_3tema.csprojAssemblyReference.cache
+C:\Users\nagld\Desktop\2 курс\САОД\btree_3tema\btree_3tema\obj\Debug\btree_3tema.exe
+C:\Users\nagld\Desktop\2 курс\САОД\btree_3tema\btree_3tema\obj\Debug\btree_3tema.pdb
