@@ -10,7 +10,7 @@ namespace btree_3tema
     {
         static void Main(string[] args)
         {
-            var obj = new BTree();
+            var obj = new Btree();
 
             var rnd = new System.Random(1);
             var init = Enumerable.Range(0, 5).OrderBy(x => rnd.Next()).ToArray();
@@ -21,7 +21,29 @@ namespace btree_3tema
             obj.Insert(8);
             obj.Insert(2);
             obj.Insert(12);
+           
 
+
+            //obj.Print();
+
+            obj.root = obj.buildtree(obj.root);
+
+            obj.Print();
+
+
+            // var lst = new LinkedList<int>();
+            // lst.FindIndex(); // FindIndex List
+
+            // k7k
+            // kk6
+            // 5kk
+            // kk3
+            // k2k
+            // kk1
+
+            //     10
+            //  5     15
+            //2  8   12
             obj.Print();
 
             Console.Read();

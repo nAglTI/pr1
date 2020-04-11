@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace btree_3tema
 {
-    class BTree
+    public class Btree
     {
         public Node root;
-        public BTree()
-        {
-
-        }
+        public Btree() { }
 
         public void Insert(int x)
         {
@@ -30,29 +27,24 @@ namespace btree_3tema
                     p.left = new Node(x);
             else
                 if (p.right != null)
-                    insert(p.right, x);
-                else
-                    p.right = new Node(x);
+                insert(p.right, x);
+            else
+                p.right = new Node(x);
         }
-
         public void Print()
         {
             print(root, 0);
         }
-
         private void print(Node p, int shift)
         {
-            if (p.right != null)
-                print(p.right, shift + 1);
-
-            for (int i = 0; i != shift; i++)
-                Console.Write("k");
-            Console.WriteLine(p.Val);
-
             if (p.left != null)
                 print(p.left, shift + 1);
+            for (int i = 0; i != shift; i++)
+                Console.Write("  ");
+            Console.WriteLine(p.Val);
+            if (p.right != null)
+                print(p.right, shift + 1);
         }
-
         public void store(Node p, List<Node> nodes)
         {
             if (p == null)
