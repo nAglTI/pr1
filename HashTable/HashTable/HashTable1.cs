@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HashTable
 {
-    class HashTable1
+    public class HashTable1
     {
         private int size;
         private LinkedList<int>[] items;
@@ -24,6 +24,9 @@ namespace HashTable
 
         public LinkedList<int> Find(int key)
         {
+            if (items[key] is null)
+                items[key] = new LinkedList<int>();
+
             return items[key];
         }
 
