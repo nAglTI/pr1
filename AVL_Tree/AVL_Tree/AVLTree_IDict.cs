@@ -103,15 +103,56 @@ namespace AVL_Tree
             return balance(n);
         }
 
-        public TValue this[TKey key] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public TValue this[TKey key] 
+        { 
+            get
+            {
+                var value = TryGetValue(key, out TValue temp);
 
-        public ICollection<TKey> Keys => throw new NotImplementedException();
+                if (!value)
+                    throw new KeyNotFoundException("NONE");
 
-        public ICollection<TValue> Values => throw new NotImplementedException();
+                return temp;
+            }
+            set
+            {
+                var value1 = TryGetValue(key, out TValue temp);
+                var n = fnode(key);
+
+                if (value1)
+                    n.value = value;
+                else
+                    Add(key, value);
+            }
+        }
+
+        private ICollection<TKey> keys()
+        {
+            var result = new List<TKey>();
+            foreach (var iter in this)
+            {
+                result.Add(iter.Key);
+            }
+            return result;
+        }
+
+        private ICollection<TValue> values()
+        {
+            var result = new List<TValue>();
+            foreach (var iter in this)
+            {
+                result.Add(iter.Value);
+            }
+            return result;
+        }
 
         public int Count => count;
 
         public bool IsReadOnly => false;
+
+        public ICollection<TKey> Keys => keys();
+
+        public ICollection<TValue> Values => values();
 
         public void Add(TKey key, TValue value)
         {
@@ -168,12 +209,33 @@ namespace AVL_Tree
 
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            List<KeyValuePair<TKey, TValue>> inArray = new List<KeyValuePair<TKey, TValue>>(this);
+            Array.Copy(inArray.ToArray(), arrayIndex, array, 0, array.Length - 1);
         }
 
-        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
+        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator() // Помогли
         {
-            throw new NotImplementedException();
+            var node = root;
+
+            Stack<Node> order = new Stack<Node>();
+
+            do
+            {
+                while (node != null)
+                {
+                    order.Push(node);
+                    node = node.left;
+                }
+
+                if (order.Count != 0)
+                {
+                    node = order.Pop();
+                    yield return new KeyValuePair<TKey, TValue>(node.key, node.value);
+
+                    node = node.right;
+                }
+            }
+            while (order.Count != 0);
         }
 
         Node findmin(Node n)
@@ -267,12 +329,46 @@ namespace AVL_Tree
 
         public bool TryGetValue(TKey key, out TValue value)
         {
-            throw new NotImplementedException();
+            Node node = root;
+            while (node != null)
+            {
+                int compK = key.CompareTo(node.key);
+                if (compK < 0)
+                    node = node.left;
+                else if (compK > 0)
+                    node = node.right;
+                else
+                {
+                    value = node.value;
+                    return true;
+                }
+            }
+            value = default;
+            return false;
+        }
+
+        private Node fnode(TKey key)
+        {
+            var n = root;
+
+            while (n != null)
+            {
+                int result = key.CompareTo(n.key);
+
+                if (result < 0)
+                    n = n.left;
+                else if (result > 0)
+                    n = n.right;
+                else
+                    return n;
+            }
+
+            return default;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
