@@ -26,9 +26,6 @@ namespace AVL_Tree
         }
 
         private Node root;
-        private int count = 0;
-
-
 
         int height(Node n)
         {
@@ -77,7 +74,7 @@ namespace AVL_Tree
             }
             else if (balfactor(n) == -2)
             {
-                if (balfactor(n.left) < 0)
+                if (balfactor(n.left) > 0)
                     n.left = RotateL(n.left);
                 return RotateR(n);
             }
@@ -88,7 +85,7 @@ namespace AVL_Tree
         {
             if (n == null)
             {
-                count++;
+                Count++;
                 return new Node(k, val);
             }
             int compare = k.CompareTo(n.key);
@@ -103,7 +100,7 @@ namespace AVL_Tree
             return balance(n);
         }
 
-        public TValue this[TKey key] 
+        public TValue this[TKey key] // Помогли
         { 
             get
             {
@@ -146,7 +143,7 @@ namespace AVL_Tree
             return result;
         }
 
-        public int Count => count;
+        public int Count { get; private set; } = 0;
 
         public bool IsReadOnly => false;
 
@@ -207,7 +204,7 @@ namespace AVL_Tree
             return false;
         }
 
-        public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
+        public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) // Помогли
         {
             List<KeyValuePair<TKey, TValue>> inArray = new List<KeyValuePair<TKey, TValue>>(this);
             Array.Copy(inArray.ToArray(), arrayIndex, array, 0, array.Length - 1);
@@ -267,7 +264,7 @@ namespace AVL_Tree
             {
                 Node l = n.left;
                 Node r = n.right;
-                count--;
+                Count--;
                 if (r == null)
                     return l;
                 Node min = findmin(r);
@@ -295,7 +292,7 @@ namespace AVL_Tree
                 {
                     Node l = n.left;
                     Node r = n.right;
-                    count--;
+                    Count--;
                     if (r == null)
                         return l;
                     Node min = findmin(r);
